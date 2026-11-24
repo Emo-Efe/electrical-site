@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const categories = [
-  { name: "Cables and wires", note: "House wiring, armoured, flexible and extension cable.", color: "border-[#8B5A2B]" },
-  { name: "Switches and sockets", note: "Wall switches, sockets, dimmers and plates.", color: "border-[#1F4FD8]" },
-  { name: "Breakers and distribution", note: "MCBs, changeover switches and distribution boards.", color: "border-[#F5C400]" },
-  { name: "Lighting", note: "Bulbs, tubes, floodlights and fittings.", color: "border-[#3B9C5A]" },
+  { name: "Cables and wires", image: "/images/categories/cables.jpg", note: "House wiring, armoured, flexible and extension cable.", color: "border-[#8B5A2B]" },
+  { name: "Switches and sockets", image: "/images/categories/switches.jpg", note: "Wall switches, sockets, dimmers and plates.", color: "border-[#1F4FD8]" },
+  { name: "Breakers and distribution", image: "/images/categories/breakers.jpg", note: "MCBs, changeover switches and distribution boards.", color: "border-[#F5C400]" },
+  { name: "Lighting", image: "/images/categories/lighting.jpg", note: "Bulbs, tubes, floodlights and fittings.", color: "border-[#3B9C5A]" },
 ];
 
 export default function Home() {
@@ -50,6 +51,15 @@ export default function Home() {
               <li key={c.name} className={`border-l-4 ${c.color} pl-4`}>
                 <h3 className="text-lg font-semibold">{c.name}</h3>
                 <p className="mt-1 max-w-md text-[#0F1B2D]/75">{c.note}</p>
+                <div className="relative mt-4 aspect-[4/3] max-w-md overflow-hidden rounded bg-[#EEF1F5]">
+                  <Image
+                    src={c.image}
+                    alt={c.name}
+                    fill
+                    sizes="(min-width: 768px) 400px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
               </li>
             ))}
           </ul>
