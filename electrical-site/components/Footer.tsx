@@ -48,8 +48,19 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 px-6 py-5 text-center text-sm text-white/60">
-        © {new Date().getFullYear()} {site.name}. All rights reserved.
+            <div className="border-t border-white/10 px-6 py-5 text-center text-sm text-white/70">
+        <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+        <p className="mt-1">
+          Website by{" "}
+          <a
+            href="https://emo-efe.github.io/jude-portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            Jude Emoefe Aminomor
+          </a>
+        </p>
       </div>
     </footer>
   );
