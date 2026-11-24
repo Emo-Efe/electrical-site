@@ -12,6 +12,7 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL(site.url),
   title: `${site.name} | Electrical supplies in Ojo, Lagos`,
   description:
     "Major distributor of electrical cables, switches, breakers and lighting in Ojo, Lagos. Request a quote today.",

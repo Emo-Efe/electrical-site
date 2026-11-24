@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const categories = [
   { name: "Cables and wires", image: "/images/categories/cables.jpg", note: "House wiring, armoured, flexible and extension cable.", color: "border-[#8B5A2B]" },
-  { name: "Switches and sockets", image: "/images/categories/switches.jpg", note: "Wall switches, sockets, dimmers and plates.", color: "border-[#1F4FD8]" },
+  { name: "Switches and sockets", image: "/images/categories/sockets.jpg", note: "Wall switches, sockets, dimmers and plates.", color: "border-[#1F4FD8]" },
   { name: "Breakers and distribution", image: "/images/categories/breakers.jpg", note: "MCBs, changeover switches and distribution boards.", color: "border-[#F5C400]" },
   { name: "Lighting", image: "/images/categories/lighting.jpg", note: "Bulbs, tubes, floodlights and fittings.", color: "border-[#3B9C5A]" },
 ];

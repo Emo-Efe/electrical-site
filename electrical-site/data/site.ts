@@ -1,5 +1,6 @@
 export const site = {
   name: "Bensheilla Concept Limited",
+  url: "https://bensheilla.com",
   shortName: "Bensheilla",
   tagline: "Electrician's First Choice",
   role: "Major distributor",
