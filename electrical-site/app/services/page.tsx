@@ -5,31 +5,37 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: `Services | ${site.name}`,
   description:
-    "Supply of electrical cables, switches, breakers, transformers and lighting, with bulk orders and product guidance in Ojo, Lagos.",
+    "Project and bulk supply, product sourcing from material lists, quotations and delivery across Lagos and Nigeria.",
 };
 
-// PLACEHOLDER WORDING: edit these to match what the client really offers.
 const services = [
   {
-    title: "Supply of electrical materials",
-    text: "Cables, switches and sockets, breakers, distribution boards, transformers and lighting, all from one place.",
+    title: "Project and bulk supply",
+    text: "Supply support for building, commercial and industrial requirements, from a few items to full project quantities.",
     color: "border-[#E02B2B]",
   },
   {
-    title: "Bulk and project orders",
-    text: "Supplies for builders, contractors and developers. Send us your list and we will quote for the full quantity.",
+    title: "Product sourcing",
+    text: "Send a bill of quantities, material schedule or a specific enquiry, and we will source what you need.",
     color: "border-[#F5C400]",
   },
   {
-    title: "Trade supply for electricians",
-    text: "A dependable source for electricians who need the right materials in stock, job after job.",
+    title: "Quotations and availability",
+    text: "Clear quotations and guidance on what is available, so you can plan your purchase with confidence.",
     color: "border-[#1B9AD6]",
   },
   {
-    title: "Help choosing the right product",
-    text: "Not sure which cable size, breaker or fitting suits your job? Tell us about it and we will guide you.",
+    title: "Order handling and delivery",
+    text: "We coordinate orders and delivery in Lagos and other locations across Nigeria.",
     color: "border-[#3B9C5A]",
   },
+];
+
+const steps = [
+  { title: "Understand", text: "We receive your material list, specifications, quantities and delivery location." },
+  { title: "Recommend and quote", text: "We review your request and respond with product information, availability and pricing." },
+  { title: "Coordinate", text: "We confirm order details and agree on fulfilment and delivery arrangements." },
+  { title: "Support", text: "We stay available for communication throughout the supply process." },
 ];
 
 export default function ServicesPage() {
@@ -39,8 +45,8 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-5xl">
           <h1 className="text-3xl font-bold md:text-4xl">Our services</h1>
           <p className="mt-3 max-w-xl text-[#0F1B2D]/75">
-            {site.name} is a {site.role.toLowerCase()} of electrical products,
-            serving homes, shops, electricians and building projects.
+            {site.name} serves contractors, property developers, electricians,
+            facility teams, businesses and individual customers.
           </p>
 
           <ul className="mt-10 grid gap-8 md:grid-cols-2">
@@ -56,8 +62,27 @@ export default function ServicesPage() {
 
       <section className="bg-[#EEF1F5] px-6 py-14">
         <div className="mx-auto max-w-5xl">
+          <h2 className="text-2xl font-bold md:text-3xl">How it works</h2>
+          <ol className="mt-8 grid gap-8 md:grid-cols-4">
+            {steps.map((s, i) => (
+              <li key={s.title}>
+                <span className="text-3xl font-bold text-[#1B9AD6]">{i + 1}</span>
+                <h3 className="mt-1 text-lg font-semibold">{s.title}</h3>
+                <p className="mt-2 text-[#0F1B2D]/75">{s.text}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-10 max-w-2xl text-sm text-[#0F1B2D]/65">
+            Product specifications, certifications, approvals and brand
+            availability are confirmed against the individual item supplied.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-[#0F1B2D] px-6 py-14 text-white">
+        <div className="mx-auto max-w-5xl">
           <h2 className="text-2xl font-bold">Need a quote?</h2>
-          <p className="mt-3 max-w-xl text-[#0F1B2D]/75">
+          <p className="mt-3 max-w-xl text-white/80">
             Tell us what you need and we will reply with availability and prices.
           </p>
           <Link

@@ -4,15 +4,16 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: `About us | ${site.name}`,
-  description: `${site.name} is a ${site.role.toLowerCase()} of electrical products based at Geda Ojo Alaba International Market, Ojo, Lagos.`,
+  description: `${site.name} is a Nigerian supplier of electrical products and building materials, serving contractors, developers, electricians and individual customers.`,
 };
 
-// PLACEHOLDER WORDING: edit the story and values with the client.
-// Add facts such as the year founded or certifications only once he confirms them.
 const values = [
-  { title: "Quality products", text: "We stock electrical materials that electricians and customers can rely on." },
-  { title: "Honest advice", text: "We help you choose what fits your job instead of selling you what you don't need." },
-  { title: "Reliable supply", text: "We aim to have the right items available when you need them." },
+  "Integrity",
+  "Quality consciousness",
+  "Customer commitment",
+  "Reliability",
+  "Professional service",
+  "Continuous improvement",
 ];
 
 export default function AboutPage() {
@@ -23,22 +24,46 @@ export default function AboutPage() {
           <div className="md:col-span-2">
             <h1 className="text-3xl font-bold md:text-4xl">About {site.shortName}</h1>
             <p className="mt-5 text-lg text-[#0F1B2D]/80">
-              {site.name} is a {site.role.toLowerCase()} of electrical cables,
-              switches and related items, based at Geda Ojo Alaba International
-              Market in Ojo, Lagos.
+              {site.name} is a Nigerian supplier of electrical products and
+              building-related materials.
             </p>
             <p className="mt-4 max-w-xl text-[#0F1B2D]/75">
-              We supply electricians, contractors, shop owners and homeowners
-              with the materials they need for safe, lasting installations.
-              Our aim is simple: to be the electrician&apos;s first choice.
+              We serve contractors, property developers, electricians,
+              facility teams, businesses and individual customers with the
+              products they need for residential, commercial and industrial
+              projects.
+            </p>
+            <p className="mt-4 max-w-xl text-[#0F1B2D]/75">
+              Our commitment is simple: make it easier for customers to source
+              essential materials through quality-conscious product selection,
+              responsive service, competitive quotations and dependable supply
+              coordination.
             </p>
 
-            <h2 className="mt-12 text-2xl font-bold">What we stand for</h2>
-            <ul className="mt-6 space-y-6">
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+              <div className="border-l-4 border-[#1B9AD6] pl-4">
+                <h2 className="text-xl font-bold">Our vision</h2>
+                <p className="mt-2 text-[#0F1B2D]/75">
+                  To become a trusted and recognised supply partner for
+                  electrical and building materials in Nigeria and the wider
+                  West African market.
+                </p>
+              </div>
+              <div className="border-l-4 border-[#F5C400] pl-4">
+                <h2 className="text-xl font-bold">Our mission</h2>
+                <p className="mt-2 text-[#0F1B2D]/75">
+                  To connect customers and project teams with dependable
+                  products and responsive supply support that helps projects
+                  progress safely, efficiently and confidently.
+                </p>
+              </div>
+            </div>
+
+            <h2 className="mt-12 text-2xl font-bold">Our values</h2>
+            <ul className="mt-5 flex flex-wrap gap-3">
               {values.map((v) => (
-                <li key={v.title} className="border-l-4 border-[#F5C400] pl-4">
-                  <h3 className="text-lg font-semibold">{v.title}</h3>
-                  <p className="mt-1 max-w-md text-[#0F1B2D]/75">{v.text}</p>
+                <li key={v} className="rounded-full border border-[#0F1B2D]/25 px-4 py-2 text-sm font-medium">
+                  {v}
                 </li>
               ))}
             </ul>
@@ -52,6 +77,7 @@ export default function AboutPage() {
                 {site.phoneDisplay}
               </a>
             </p>
+            <p className="mt-4 text-white/80">Serving customers across Nigeria.</p>
             <p className="mt-5 font-semibold text-[#F5C400]">{site.tagline}</p>
             <Link
               href="/contact"

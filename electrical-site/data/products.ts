@@ -1,4 +1,4 @@
-// PLACEHOLDER CONTENT: replace with the client's real products.
+// Product list based on the client's company profile and WhatsApp catalogue.
 // To add a photo, put the file in public/images/products/ and set
 // image: "/images/products/your-file.jpg" on that product.
 
@@ -20,48 +20,75 @@ export const categories: Category[] = [
   {
     slug: "cables",
     name: "Cables and wires",
-    intro: "Cable for homes, shops and building projects.",
+    intro: "Cable for residential, commercial and industrial projects.",
     color: "border-[#E02B2B]",
     products: [
-      { name: "House wiring cable", description: "Single and multi-core cable for general wiring. Ask for available sizes." },
-      { name: "Armoured cable", description: "Protected cable for outdoor and heavy-duty installations." },
-      { name: "Flexible cable", description: "Flexible cable for appliances and portable equipment." },
-      { name: "Extension cable", description: "Ready-to-use extension leads and cable by the length." },
-    ],
-  },
-  {
-    slug: "switches",
-    name: "Switches and sockets",
-    intro: "Everyday wall fittings in a range of styles.",
-    color: "border-[#1B9AD6]",
-    products: [
-      { name: "Wall switches", description: "One-gang to multi-gang switches." },
-      { name: "Sockets", description: "Single and double sockets, with or without switch." },
-      { name: "Dimmers", description: "Dimmer switches for lighting control." },
-      { name: "Cover plates", description: "Plates and accessories to finish the installation." },
+      { name: "Building wires", description: "Wires for general building and installation work." },
+      { name: "Single-core and multi-core cables", description: "Ask for available sizes and core counts." },
+      { name: "Flexible cables", description: "Flexible cable for appliances and portable equipment." },
+      { name: "Control cables", description: "Control cables. Ask for available types." },
+      { name: "Armoured and non-armoured cables", description: "Protected and standard cable for different installations." },
+      { name: "XLPE and FRZHLS cables", description: "Specialist cable types. Ask for availability." },
+      { name: "Bare conductors", description: "Bare conductors. Ask for available sizes." },
     ],
   },
   {
     slug: "power",
-    name: "Power and distribution",
+    name: "Power distribution",
     intro: "Protection, control and power equipment for your supply.",
     color: "border-[#F5C400]",
     products: [
-      { name: "Hisense power transformer", description: "Power transformer for electrical distribution. Ask for ratings and availability." },
-      { name: "Circuit breakers (MCBs)", description: "Protect circuits against overload and faults." },
+      { name: "MCBs", description: "Miniature circuit breakers for overload and fault protection." },
+      { name: "MCCBs", description: "Moulded case circuit breakers for larger loads." },
       { name: "Changeover switches", description: "Switch between mains and generator supply." },
-      { name: "Distribution boards", description: "Boards for homes, shops and small buildings." },
+      { name: "Contactors and fuse bases", description: "Control and protection components." },
+      { name: "Distribution boards and panels", description: "Boards and panels for homes, businesses and sites." },
+      { name: "Hisense power transformer", description: "Power transformer for electrical distribution. Ask for ratings and availability." },
+    ],
+  },
+  {
+    slug: "switches",
+    name: "Switches and accessories",
+    intro: "Wiring accessories and fittings for every installation.",
+    color: "border-[#1B9AD6]",
+    products: [
+      { name: "Switches and sockets", description: "Wall switches and sockets in a range of styles." },
+      { name: "Plugs", description: "Plugs and related wiring accessories." },
+      { name: "Conduits and fittings", description: "Conduits and fittings. Ask for available sizes." },
+      { name: "Cable-management products", description: "Cable-management products. Ask for what you need." },
     ],
   },
   {
     slug: "lighting",
     name: "Lighting",
-    intro: "Bulbs and fittings for indoors and outdoors.",
+    intro: "Lighting for indoor and outdoor use.",
     color: "border-[#3B9C5A]",
     products: [
-      { name: "LED bulbs", description: "Energy-saving bulbs in several fittings." },
-      { name: "Tube lights", description: "Tube lights and fittings for offices and shops." },
-      { name: "Floodlights", description: "Outdoor lighting for compounds and security." },
+      { name: "LED lighting", description: "Energy-saving LED lights in several fittings." },
+      { name: "Indoor and outdoor fittings", description: "Fittings for homes, shops, offices and compounds." },
+      { name: "Decorative lighting", description: "Lighting to finish a space." },
+      { name: "Smart lighting", description: "Selected smart-lighting products. Ask for availability." },
+    ],
+  },
+  {
+    slug: "solar",
+    name: "Power and solar accessories",
+    intro: "Supporting materials for power systems.",
+    color: "border-[#0F1B2D]",
+    products: [
+      { name: "Solar and inverter accessories", description: "Accessories for solar and inverter installations." },
+      { name: "Power-system components", description: "Selected components and supporting electrical materials." },
+    ],
+  },
+  {
+    slug: "building",
+    name: "Building and waterproofing",
+    intro: "Selected waterproofing products and related building materials.",
+    color: "border-[#8B5A2B]",
+    products: [
+      { name: "Purechem Top Shield", description: "Waterproofing product. Ask for details and availability." },
+      { name: "Topgit PVC gum", description: "PVC gum. Ask for details and availability." },
+      { name: "Related building materials", description: "Ask us about other building materials you need." },
     ],
   },
 ];
